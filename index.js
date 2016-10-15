@@ -1,23 +1,57 @@
-//Lets require/import the HTTP module
-var http = require('http');
 var express = require('express');
 var app = express();
-app.use(express.static('public'));
-app.use('/static', express.static(__dirname + '/public'));
+var path = require('path');
+var PythonShell = require('python-shell');
 
-//Lets define a port we want to listen to
-const PORT=8000; 
 
-//We need a function which handles requests and send response
-function handleRequest(request, response){
-    response.send(index.html);
-}
+const PORT=8000;
 
-//Create a server
-var server = http.createServer(handleRequest);
+// viewed at http://localhost:8080
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/index.html'));
+});
 
-//Lets start our server
-server.listen(PORT, function(){
+app.listen(PORT, function(){
     //Callback triggered when server is successfully listening. Hurray!
     console.log("Server listening on: http://localhost:%s", PORT);
+});
+
+app.get('/BreakfastLowCal', function(req,res) {
+
+});
+
+app.get('/BreakfastMedCal', function(req,res) {
+
+});
+
+app.get('/BreakfastHighCal', function(req,res) {
+
+});
+
+app.get('/LunchLowCal', function(req,res) {
+	
+});
+
+app.get('/LunchMedCal', function(req,res) {
+	
+});
+
+app.get('/LunchHighCal', function(req,res) {
+	
+});
+
+app.get('/DinnerLowCal', function(req,res) {
+	
+});
+
+app.get('/DinnerMedCal', function(req,res) {
+	
+});
+
+app.get('/DinnerHighCal', function(req,res) {
+	
+});
+
+app.get('/Meals', function(req,res) {
+	
 });
