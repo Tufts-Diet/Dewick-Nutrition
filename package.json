@@ -45,6 +45,7 @@
     "url": "https://github.com/jshttp/content-type/issues"
   },
   "dependencies": {
+    "jsonfile": "^2.4.0",
     "python-shell": "^0.4.0"
   },
   "description": "Create and parse HTTP Content-Type header",

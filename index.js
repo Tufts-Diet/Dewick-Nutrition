@@ -2,14 +2,32 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var PythonShell = require('python-shell');
+var jsonfile = require('jsonfile');
+
+var allowCrossDomain = function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
+
+    // intercept OPTIONS method
+    if ('OPTIONS' == req.method) {
+      res.sendStatus(200);
+    }
+    else {
+    	next();
+    }
+};
+
+	app.use(allowCrossDomain);
+	app.use(express.static(__dirname + '/public'));
 
 app.set('port', (process.env.PORT || 8000));
 
 var py_options = {
-scriptPath: '~/Desktop/Just\ for\ me/Dewick-Nutrition/'
+scriptPath: __dirname + '/'
 };
 
-PythonShell.run('data_mine.py', py_options, function (err, results) { 
+PythonShell.run('simple_test.py', py_options, function (err, results) { 
 //your code (sets variables for files?)
 });
 
@@ -18,44 +36,17 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
 
-app.get('/BreakfastLowCal', function(req,res) {
+app.get('/FoodInfo.json', function(req,res) {
 
-});
+  var file = __dirname + '/FoodInfo.json';
 
-app.get('/BreakfastMedCal', function(req,res) {
-
-});
-
-app.get('/BreakfastHighCal', function(req,res) {
-
-});
-
-app.get('/LunchLowCal', function(req,res) {
-	
-});
-
-app.get('/LunchMedCal', function(req,res) {
-	
-});
-
-app.get('/LunchHighCal', function(req,res) {
-	
-});
-
-app.get('/DinnerLowCal', function(req,res) {
-	
-});
-
-app.get('/DinnerMedCal', function(req,res) {
-	
-});
-
-app.get('/DinnerHighCal', function(req,res) {
-	
-});
-
-app.get('/Meals', function(req,res) {
-	
+  jsonfile.readFile(file, function(err, obj) {
+    if(err) {
+      res.json({status: 'error', reason: err.toString()});
+      return;
+    }
+    res.send(JSON.stringify((obj)));
+  });
 });
 
 app.listen(app.get('port'), function(){
