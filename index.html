@@ -47,15 +47,15 @@
   <h2>How much do you need to eat?</h2>
   <br>
     <div class="col-sm-4">
-      <h4><a href="#Low_Exercise">Low Exercise Meal Plan (~1500 Calories)</a></h4>
+      <h4><a href="#Low_Exercise">Low Exercise Meal Plan<br>~1500 Calories</a></h4>
       <p>For small people (under 130lbs)</p>
     </div>
     <div class="col-sm-4">
-      <h4><a href="#Medium_Exercise">Medium Exercise Meal Plan (~2000 Calories)</a></h4>
+      <h4><a href="#Medium_Exercise">Medium Exercise Meal Plan<br>~2000 Calories</a></h4>
       <p>For moderately sized people (around 160lbs)</p>
     </div>
     <div class="col-sm-4">
-      <h4><a href="#High_Exercise">High Exercise Meal Plan (~2500 Calories)</a></h4>
+      <h4><a href="#High_Exercise">High Exercise Meal Plan<br>~2500 Calories</a></h4>
       <p>For big people (around 200lbs)</p>
     </div>
 </div>
@@ -287,7 +287,13 @@ $(document).ready(function(){
         }
     });
   });
-})
+
+
+  //AJAX
+  $.get("demo_test.asp", function(data, status){
+    alert("Data: " + data + "\nStatus: " + status);
+  });
+});
 </script>
 
 </body>
