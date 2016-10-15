@@ -16,14 +16,14 @@ for meal in result:
 		soup_f = BeautifulSoup(f)
 		bold = []
 		font = []
-		for b in soup_f.find_all('b'):
+		for b in soup_f.find_all(font size="5" face="arial"):
 			bold.append(b)
 			print b
-		for r in soup_f.find_all('font'):
+		for r in soup_f.find_all(font size="3" face="arial"):
 			font.append(f)
 			print f
-		nut = Nutrients
-		nut.cals = 
+		#nut = Nutrients
+		#nut.cals = 
 		
 
 
