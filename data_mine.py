@@ -9,4 +9,4 @@ result = soup.find_all(onmouseover = "window.status = 'Click for Nutritive Analy
 for meal in result:
 	l = urllib.urlopen("http://menus.tufts.edu/foodpro/" + meal.get('href')).read()
 	soup_l = BeautifulSoup(l)
-	foods  soup_l.find_all(
+	foods  soup_l.find_all()
