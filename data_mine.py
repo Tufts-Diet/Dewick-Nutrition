@@ -2,25 +2,6 @@ from bs4 import BeautifulSoup
 import urllib
 import re
 
-
-from html.parser import HTMLParser
-
-class MLStripper(HTMLParser):
-    def __init__(self):
-        self.reset()
-        self.strict = False
-        self.convert_charrefs= True
-        self.fed = []
-    def handle_data(self, d):
-        self.fed.append(d)
-    def get_data(self):
-        return ''.join(self.fed)
-
-def strip_tags(html):
-    s = MLStripper()
-    s.feed(html)
-    return s.get_data()
-
 menu = urllib.urlopen('http://menus.tufts.edu/foodpro/shortmenu.asp?sName=Tufts%20Dining&locationNum=11&locationName=Dewick-MacPhie%20Dining%20Center&naFlag=1').read()
 soup = BeautifulSoup(menu)
 
@@ -37,9 +18,10 @@ for meal in result:
 		bold = []
 		font = []
 		for b in soup_f.find_all('font'):
-			strip_tags(b)
 			bold.append(b)
 			print b
+		break
+	break
 		#for r in soup_f.find_all(font size="3" face="arial"):
 		#	font.append(f)
 		#	print f
