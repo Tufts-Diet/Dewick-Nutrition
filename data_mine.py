@@ -1,6 +1,11 @@
 from bs4 import BeautifulSoup
 import urllib
 import re
+
+
+def remove_tags(text):
+    return ''.join(xml.etree.ElementTree.fromstring(text).itertext())
+
 menu = urllib.urlopen('http://menus.tufts.edu/foodpro/shortmenu.asp?sName=Tufts%20Dining&locationNum=11&locationName=Dewick-MacPhie%20Dining%20Center&naFlag=1').read()
 soup = BeautifulSoup(menu)
 
@@ -34,5 +39,3 @@ class Nutrients:
 	sod = 0
 	prot = 0
 
-def remove_tags(text):
-    return ''.join(xml.etree.ElementTree.fromstring(text).itertext())
