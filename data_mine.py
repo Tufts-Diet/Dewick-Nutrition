@@ -15,8 +15,10 @@ menu = urllib.urlopen('http://menus.tufts.edu/foodpro/shortmenu.asp?sName=Tufts%
 soup = BeautifulSoup(menu)
 
 result = soup.find_all(onmouseover = "window.status = 'Click for Nutritive Analysis.'; return true;")
+i = 0
 
 for meal in result:
+	i += 1
 	l = urllib.urlopen("http://menus.tufts.edu/foodpro/" + meal.get('href')).read()
 	soup_l = BeautifulSoup(l)
 	foods = soup_l.find_all(onmouseover = "window.status = 'Click for label of this item.'; return true;")
@@ -41,8 +43,7 @@ for meal in result:
 			break
 		bold[1] = bold[1][8:]
 		bold[1] = int(bold[1])
-		if bold[1] >= 50:
-			print ""	
+		if bold[1] >= 50:	
 			print label[0]
 			print bold[1]
 			print bold[7]
@@ -50,6 +51,8 @@ for meal in result:
 			print font[18]
 			font[20] = font[20][:-2]
 			print font[20]
+			print i
+			print ""
 		#for r in soup_f.find_all(font size="3" face="arial"):
 		#	font.append(f)
 		#	print f
