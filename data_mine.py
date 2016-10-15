@@ -17,11 +17,12 @@ for meal in result:
 		bold = []
 		font = []
 		for b in soup_f.find_all(font size="5" face="arial"):
+			strip_tags(b)
 			bold.append(b)
 			print b
-		for r in soup_f.find_all(font size="3" face="arial"):
-			font.append(f)
-			print f
+		#for r in soup_f.find_all(font size="3" face="arial"):
+		#	font.append(f)
+		#	print f
 		#nut = Nutrients
 		#nut.cals = 
 		
@@ -32,3 +33,21 @@ class Nutrients:
 	fat = 0
 	sod = 0
 	prot = 0
+
+from html.parser import HTMLParser
+
+class MLStripper(HTMLParser):
+    def __init__(self):
+        self.reset()
+        self.strict = False
+        self.convert_charrefs= True
+        self.fed = []
+    def handle_data(self, d):
+        self.fed.append(d)
+    def get_data(self):
+        return ''.join(self.fed)
+
+def strip_tags(html):
+    s = MLStripper()
+    s.feed(html)
+    return s.get_data()
