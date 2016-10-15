@@ -132,6 +132,9 @@
   .mealinfo {
     display:inline;
   }
+  .hightlights {
+    font-size: 24px;
+  }
   .navbar li a, .navbar .navbar-brand {
       color: #fff !important;
   }
@@ -193,6 +196,9 @@
     .logo {
         font-size: 150px;
     }
+  }
+  .highlights {
+    font-size: 18px;
   }
   </style>
 
@@ -387,16 +393,13 @@
           <h1>Breakfast</h1>
         </div>
         <div class="panel-body">
-          <p><strong>20</strong> Lorem</p>
-          <p><strong>15</strong> Ipsum</p>
-          <p><strong>5</strong> Dolor</p>
-          <p><strong>2</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
+          <p><strong><div class="mealinfo highlights" id=B1></div></strong></p>
+          <p><strong><div class="mealinfo highlights" id=B2></div></strong></p>
+          <p><strong><div class="mealinfo highlights" id=B3></div></strong></p>
+          <p><strong><div class="mealinfo highlights" id=B4></div></strong></p>
+          <p><strong><div class="mealinfo highlights" id=B5></div></strong></p>
         </div>
         <div class="panel-footer">
-          <h3>$19</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
         </div>
       </div>
     </div>
@@ -406,16 +409,13 @@
           <h1>Lunch</h1>
         </div>
         <div class="panel-body">
-          <p><strong>50</strong> Lorem</p>
-          <p><strong>25</strong> Ipsum</p>
-          <p><strong>10</strong> Dolor</p>
-          <p><strong>5</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
+          <p><strong><div class="mealinfo highlights" id=L1></div></strong></p>
+          <p><strong><div class="mealinfo highlights" id=L2></div></strong></p>
+          <p><strong><div class="mealinfo highlights" id=L3></div></strong></p>
+          <p><strong><div class="mealinfo highlights" id=L4></div></strong></p>
+          <p><strong><div class="mealinfo highlights" id=L5></div></strong></p>
         </div>
         <div class="panel-footer">
-          <h3>$29</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
         </div>
       </div>
     </div>
@@ -425,16 +425,13 @@
           <h1>Dinner</h1>
         </div>
         <div class="panel-body">
-          <p><strong>100</strong> Lorem</p>
-          <p><strong>50</strong> Ipsum</p>
-          <p><strong>25</strong> Dolor</p>
-          <p><strong>10</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
+          <p><strong><div class="mealinfo highlights" id=D1></div></strong></p>
+          <p><strong><div class="mealinfo highlights" id=D2></div></strong></p>
+          <p><strong><div class="mealinfo highlights" id=D3></div></strong></p>
+          <p><strong><div class="mealinfo highlights" id=D4></div></strong></p>
+          <p><strong><div class="mealinfo highlights" id=D5></div></strong></p>
         </div>
         <div class="panel-footer">
-          <h3>$49</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
         </div>
       </div>
     </div>
@@ -486,8 +483,8 @@ $(document).ready(function(){
 
 
   //AJAX
-  $.get("http://intense-waters-35324.herokuapp.com/FoodInfo.json", function(data, status){  
-  //$.get("http://localhost:8000/FoodInfo.json", function(data, status){
+  //$.get("http://intense-waters-35324.herokuapp.com/FoodInfo.json", function(data, status){  
+  $.get("http://localhost:8000/FoodInfo.json", function(data, status){
     foodInfo = jQuery.parseJSON(data);
     console.log(foodInfo);
 
@@ -498,6 +495,7 @@ $(document).ready(function(){
     $("#LDM").text(foodInfo.Dinner.LowCal.MainCourse[0]);
     $("#LDS1").text(foodInfo.Dinner.LowCal.SideDish1[0]);
     $("#LDS2").text(foodInfo.Dinner.LowCal.SideDish2[0]);
+
     $("#MBM").text(foodInfo.Breakfast.MedCal.MainCourse[0]);
     $("#MBS").text(foodInfo.Breakfast.MedCal.SideDish[0]);
     $("#MLM").text(foodInfo.Lunch.MedCal.MainCourse[0]);
@@ -505,6 +503,7 @@ $(document).ready(function(){
     $("#MDM").text(foodInfo.Dinner.MedCal.MainCourse[0]);
     $("#MDS1").text(foodInfo.Dinner.MedCal.SideDish1[0]);
     $("#MDS2").text(foodInfo.Dinner.MedCal.SideDish2[0]);
+
     $("#HBM").text(foodInfo.Breakfast.HighCal.MainCourse[0]);
     $("#HBS").text(foodInfo.Breakfast.HighCal.SideDish[0]);
     $("#HLM").text(foodInfo.Lunch.HighCal.MainCourse[0]);
@@ -513,6 +512,23 @@ $(document).ready(function(){
     $("#HDS1").text(foodInfo.Dinner.HighCal.SideDish1[0]);
     $("#HDS2").text(foodInfo.Dinner.HighCal.SideDish2[0]);
 
+    $("#B1").text(foodInfo.Highlights.Breakfast.Food1[0]);
+    $("#B2").text(foodInfo.Highlights.Breakfast.Food2[0]);
+    $("#B3").text(foodInfo.Highlights.Breakfast.Food3[0]);
+    $("#B4").text(foodInfo.Highlights.Breakfast.Food4[0]);
+    $("#B5").text(foodInfo.Highlights.Breakfast.Food5[0]);
+
+    $("#L1").text(foodInfo.Highlights.Lunch.Food1[0]);
+    $("#L2").text(foodInfo.Highlights.Lunch.Food2[0]);
+    $("#L3").text(foodInfo.Highlights.Lunch.Food3[0]);
+    $("#L4").text(foodInfo.Highlights.Lunch.Food4[0]);
+    $("#L5").text(foodInfo.Highlights.Lunch.Food5[0]);
+
+    $("#D1").text(foodInfo.Highlights.Dinner.Food1[0]);
+    $("#D2").text(foodInfo.Highlights.Dinner.Food2[0]);
+    $("#D3").text(foodInfo.Highlights.Dinner.Food3[0]);
+    $("#D4").text(foodInfo.Highlights.Dinner.Food4[0]);
+    $("#D5").text(foodInfo.Highlights.Dinner.Food5[0]);
 
   });
 });

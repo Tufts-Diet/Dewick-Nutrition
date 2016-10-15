@@ -1,0 +1,63 @@
+{"Breakfast":{
+  "LowCal":{
+    "MainCourse": ["Chicken Pattie", "325", "1", "5", "2"],
+    "SideDish": ["Italian Salad", "254", "5", "2", "4"]},
+  "MedCal":{
+    "MainCourse": ["Chicken Nugget", "275", "4", "8", "19"],
+    "SideDish": ["Unmedicated Pastrami", "86", "0", "31", "2"]},
+  "HighCal":{
+    "MainCourse": ["Big Mama", "666", "3", "2", "1"],
+    "SideDish": ["More Pastrami", "86", "0", "31", "22"]}
+  },
+
+"Lunch":{
+  "LowCal":{
+    "MainCourse": ["Chicken Pattie", "325", "1", "5", "2"],
+    "SideDish": ["Italian Salad", "254", "5", "2", "4"]},
+  "MedCal":{
+    "MainCourse": ["Chicken Nugget", "275", "4", "8", "19"],
+    "SideDish": ["Unmedicated Pastrami", "86", "0", "31", "2"]},
+  "HighCal":{
+    "MainCourse": ["Big Mama", "666", "3", "2", "1"],
+    "SideDish": ["More Pastrami", "86", "0", "31", "22"]}
+  },
+
+"Dinner":{
+  "LowCal":{
+    "MainCourse": ["Chicken Pattie", "325", "1", "5", "2"],
+    "SideDish": ["Italian Salad", "254", "5", "2", "4"],
+    "SideDish": ["Another Salad", "223", "5", "8", "1"]},
+  "MedCal":{
+    "MainCourse": ["Chicken Nugget", "275", "4", "8", "19"],
+    "SideDish": ["Unmedicated Pastrami", "86", "0", "31", "2"],
+    "SideDish": ["Another Salad", "223", "5", "8", "1"]},
+  "HighCal":{
+    "MainCourse": ["Big Mama", "666", "3", "2", "1"],
+    "SideDish": ["More Pastrami", "86", "0", "31", "22"],
+    "SideDish": ["Another Salad", "223", "5", "8", "1"]}
+  },
+  
+  "Highlights":{
+    "Breakfast":{
+      "Food1":["name", "info1", "info2", "info3", "info4"],
+      "Food2":["name", "info1", "info2", "info3", "info4"],
+      "Food3":["name", "info1", "info2", "info3", "info4"],
+      "Food4":["name", "info1", "info2", "info3", "info4"],
+      "Food5":["name", "info1", "info2", "info3", "info4"]
+    },
+    "Lunch":{
+      "Food1":["name", "info1", "info2", "info3", "info4"],
+      "Food2":["name", "info1", "info2", "info3", "info4"],
+      "Food3":["name", "info1", "info2", "info3", "info4"],
+      "Food4":["name", "info1", "info2", "info3", "info4"],
+      "Food5":["name", "info1", "info2", "info3", "info4"]
+    },
+    "Dinner":{
+      "Food1":["name", "info1", "info2", "info3", "info4"],
+      "Food2":["name", "info1", "info2", "info3", "info4"],
+      "Food3":["name", "info1", "info2", "info3", "info4"],
+      "Food4":["name", "info1", "info2", "info3", "info4"],
+      "Food5":["name", "info1", "info2", "info3", "info4"]
+    }
+ }
+}

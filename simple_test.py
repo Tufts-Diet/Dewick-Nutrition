@@ -37,5 +37,28 @@ f1.write('\
     "MainCourse": ["Big Mama", "666", "3", "2", "1"],\
     "SideDish1": ["More Pastrami", "86", "0", "31", "22"],\
     "SideDish2": ["Another Salad", "223", "5", "8", "1"]}\
-  }\
+  },\
+\
+  "Highlights":{\
+    "Breakfast":{\
+      "Food1":["name", "info1", "info2", "info3", "info4"],\
+      "Food2":["name", "info1", "info2", "info3", "info4"],\
+      "Food3":["name", "info1", "info2", "info3", "info4"],\
+      "Food4":["name", "info1", "info2", "info3", "info4"],\
+      "Food5":["name", "info1", "info2", "info3", "info4"]\
+    },\
+    "Lunch":{\
+      "Food1":["name", "info1", "info2", "info3", "info4"],\
+      "Food2":["name", "info1", "info2", "info3", "info4"],\
+      "Food3":["name", "info1", "info2", "info3", "info4"],\
+      "Food4":["name", "info1", "info2", "info3", "info4"],\
+      "Food5":["name", "info1", "info2", "info3", "info4"]\
+    },\
+    "Dinner":{\
+      "Food1":["name", "info1", "info2", "info3", "info4"],\
+      "Food2":["name", "info1", "info2", "info3", "info4"],\
+      "Food3":["name", "info1", "info2", "info3", "info4"],\
+      "Food4":["name", "info1", "info2", "info3", "info4"],\
+      "Food5":["name", "info1", "info2", "info3", "info4"]\
+    }}\
  }')
