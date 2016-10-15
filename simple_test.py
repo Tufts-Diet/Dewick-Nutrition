@@ -12,4 +12,4 @@ f1.write('\
      "SideDish": "Bacon and Potatoes",\
      "Drink": "Lemon-infused Water"\
     }]\
-  }]})')
+  }]}')
