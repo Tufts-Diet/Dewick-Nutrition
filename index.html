@@ -129,6 +129,12 @@
       border-radius: 0;
       font-family: Montserrat, sans-serif;
   }
+  .mealinfo {
+    display:inline;
+  }
+  .hightlights {
+    font-size: 24px;
+  }
   .navbar li a, .navbar .navbar-brand {
       color: #fff !important;
   }
@@ -190,6 +196,9 @@
     .logo {
         font-size: 150px;
     }
+  }
+  .highlights {
+    font-size: 18px;
   }
   </style>
 
@@ -258,13 +267,16 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <h4>Breakfast<br>For Breakfast, you should have </h4>
+        <h4>Breakfast<br>Your main dish should be <div class="mealinfo" id="LBM" data-toggle="tooltip" data-placement="top"></div><br>Your side dish
+        should be <div class="mealinfo" id="LBS"></div> </h4>
       </div>
       <div class="item">
-        <h4>Lunch</h4>
+        <h4>Lunch<br>Your main dish should be <div class="mealinfo" id="LLM"></div><br>Your side dish
+        should be <div class="mealinfo" id="LLS"></div> </h4>
       </div>
       <div class="item">
-        <h4>Dinner</h4>
+        <h4>Dinner<br>Your main dish should be <div class="mealinfo" id="LDM"></div><br>Your first side dish
+        should be <div class="mealinfo" id="LDS1"></div><br>Your second side dish should be <div class="mealinfo" id="LDS2"></div> </h4>
       </div>
     </div>
 
@@ -299,13 +311,16 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <h4>Breakfast</h4>
+        <h4>Breakfast<br>Your main dish should be <div class="mealinfo" id="MBM"></div><br>Your side dish
+        should be <div class="mealinfo" id="MBS"></div> </h4>
       </div>
       <div class="item">
-        <h4>Lunch</h4>
+        <h4>Lunch<br>Your main dish should be <div class="mealinfo" id="MLM"></div><br>Your side dish
+        should be <div class="mealinfo" id="MLS"></div> </h4>
       </div>
       <div class="item">
-        <h4>Dinner</h4>
+        <h4>Dinner<br>Your main dish should be <div class="mealinfo" id="MDM"></div><br>Your first side dish
+        should be <div class="mealinfo" id="MDS1"></div><br>Your second side dish should be <div class="mealinfo" id="MDS2"></div> </h4>
       </div>
     </div>
 
@@ -338,13 +353,16 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <h4>Breakfast</h4>
+        <h4>Breakfast<br>Your main dish should be <div class="mealinfo" id="HBM"></div><br>Your side dish
+        should be <div class="mealinfo" id="HBS"></div> </h4>
       </div>
       <div class="item">
-        <h4>Lunch</h4>
+        <h4>Lunch<br>Your main dish should be <div class="mealinfo" id="HLM"></div><br>Your side dish
+        should be <div class="mealinfo" id="HLS"></div> </h4>
       </div>
       <div class="item">
-        <h4>Dinner</h4>
+        <h4>Dinner<br>Your main dish should be <div class="mealinfo" id="HDM"></div><br>Your first side dish
+        should be <div class="mealinfo" id="HDS1"></div><br>Your second side dish should be <div class="mealinfo" id="HDS2"></div></h4>
       </div>
     </div>
 
@@ -375,16 +393,13 @@
           <h1>Breakfast</h1>
         </div>
         <div class="panel-body">
-          <p><strong>20</strong> Lorem</p>
-          <p><strong>15</strong> Ipsum</p>
-          <p><strong>5</strong> Dolor</p>
-          <p><strong>2</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
+          <p><strong><div class="mealinfo highlights" id=B1></div></strong></p>
+          <p><strong><div class="mealinfo highlights" id=B2></div></strong></p>
+          <p><strong><div class="mealinfo highlights" id=B3></div></strong></p>
+          <p><strong><div class="mealinfo highlights" id=B4></div></strong></p>
+          <p><strong><div class="mealinfo highlights" id=B5></div></strong></p>
         </div>
         <div class="panel-footer">
-          <h3>$19</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
         </div>
       </div>
     </div>
@@ -394,16 +409,13 @@
           <h1>Lunch</h1>
         </div>
         <div class="panel-body">
-          <p><strong>50</strong> Lorem</p>
-          <p><strong>25</strong> Ipsum</p>
-          <p><strong>10</strong> Dolor</p>
-          <p><strong>5</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
+          <p><strong><div class="mealinfo highlights" id=L1></div></strong></p>
+          <p><strong><div class="mealinfo highlights" id=L2></div></strong></p>
+          <p><strong><div class="mealinfo highlights" id=L3></div></strong></p>
+          <p><strong><div class="mealinfo highlights" id=L4></div></strong></p>
+          <p><strong><div class="mealinfo highlights" id=L5></div></strong></p>
         </div>
         <div class="panel-footer">
-          <h3>$29</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
         </div>
       </div>
     </div>
@@ -413,16 +425,13 @@
           <h1>Dinner</h1>
         </div>
         <div class="panel-body">
-          <p><strong>100</strong> Lorem</p>
-          <p><strong>50</strong> Ipsum</p>
-          <p><strong>25</strong> Dolor</p>
-          <p><strong>10</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
+          <p><strong><div class="mealinfo highlights" id=D1></div></strong></p>
+          <p><strong><div class="mealinfo highlights" id=D2></div></strong></p>
+          <p><strong><div class="mealinfo highlights" id=D3></div></strong></p>
+          <p><strong><div class="mealinfo highlights" id=D4></div></strong></p>
+          <p><strong><div class="mealinfo highlights" id=D5></div></strong></p>
         </div>
         <div class="panel-footer">
-          <h3>$49</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
         </div>
       </div>
     </div>
@@ -436,6 +445,9 @@
 
 <script>
 $(document).ready(function(){
+
+  $(".mealinfo").text("showing up soon!");
+
   // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a,footer a,#myPage a").on('click', function(event) {
     // Make sure this.hash has a value before overriding default behavior
@@ -471,12 +483,76 @@ $(document).ready(function(){
 
 
   //AJAX
-  $.get("http://localhost:8000/FoodInfo.json", function(data, status){
-    console.log(data);
+  $.get("http://intense-waters-35324.herokuapp.com/FoodInfo.json", function(data, status){  
+  //$.get("http://localhost:8000/FoodInfo.json", function(data, status){
+    foodInfo = jQuery.parseJSON(data);
+    console.log(foodInfo);
+
+    $("#LBM").text(foodInfo.Breakfast.LowCal.MainCourse[0]+" with "+foodInfo.Breakfast.LowCal.MainCourse[1]+" Calories, "+foodInfo.Breakfast.LowCal.MainCourse[2]+"% DV of fat, "+foodInfo.Breakfast.LowCal.MainCourse[3]+"mg of sodium, and "+foodInfo.Breakfast.LowCal.MainCourse[4]+"g of protein");
+
+    $("#LBS").text(foodInfo.Breakfast.LowCal.SideDish[0]+" with "+foodInfo.Breakfast.LowCal.SideDish[1]+" Calories, "+foodInfo.Breakfast.LowCal.SideDish[2]+"% DV of fat, "+foodInfo.Breakfast.LowCal.SideDish[3]+"mg of sodium, and "+foodInfo.Breakfast.LowCal.SideDish[4]+"g of protein");
+
+    $("#LLM").text(foodInfo.Lunch.LowCal.MainCourse[0]+" with "+foodInfo.Lunch.LowCal.MainCourse[1]+" Calories, "+foodInfo.Lunch.LowCal.MainCourse[2]+"% DV of fat, "+foodInfo.Lunch.LowCal.MainCourse[3]+"mg of sodium, and "+foodInfo.Lunch.LowCal.MainCourse[4]+"g of protein");
+
+    $("#LLS").text(foodInfo.Lunch.LowCal.SideDish[0]+" with "+foodInfo.Lunch.LowCal.SideDish[1]+" Calories, "+foodInfo.Lunch.LowCal.SideDish[2]+"% DV of fat, "+foodInfo.Lunch.LowCal.SideDish[3]+"mg of sodium, and "+foodInfo.Lunch.LowCal.SideDish[4]+"g of protein");
+
+    $("#LDM").text(foodInfo.Dinner.LowCal.MainCourse[0]+" with "+foodInfo.Dinner.LowCal.MainCourse[1]+" Calories, "+foodInfo.Dinner.LowCal.MainCourse[2]+"% DV of fat, "+foodInfo.Dinner.LowCal.MainCourse[3]+"mg of sodium, and "+foodInfo.Dinner.LowCal.MainCourse[4]+"g of protein");
+
+    $("#LDS1").text(foodInfo.Dinner.LowCal.SideDish1[0]+" with "+foodInfo.Dinner.LowCal.SideDish1[1]+" Calories, "+foodInfo.Dinner.LowCal.SideDish1[2]+"% DV of fat, "+foodInfo.Dinner.LowCal.SideDish1[3]+"mg of sodium, and "+foodInfo.Dinner.LowCal.SideDish1[4]+"g of protein");
+
+    $("#LDS2").text(foodInfo.Dinner.LowCal.SideDish2[0]+" with "+foodInfo.Dinner.LowCal.SideDish2[1]+" Calories, "+foodInfo.Dinner.LowCal.SideDish2[2]+"% DV of fat, "+foodInfo.Dinner.LowCal.SideDish2[3]+"mg of sodium, and "+foodInfo.Dinner.LowCal.SideDish2[4]+"g of protein");
+
+    $("#MBM").text(foodInfo.Breakfast.MedCal.MainCourse[0]+" with "+foodInfo.Breakfast.MedCal.MainCourse[1]+" Calories, "+foodInfo.Breakfast.MedCal.MainCourse[2]+"% DV of fat, "+foodInfo.Breakfast.MedCal.MainCourse[3]+"mg of sodium, and "+foodInfo.Breakfast.MedCal.MainCourse[4]+"g of protein");
+
+    $("#MBS").text(foodInfo.Breakfast.MedCal.SideDish[0]+" with "+foodInfo.Breakfast.MedCal.SideDish[1]+" Calories, "+foodInfo.Breakfast.MedCal.SideDish[2]+"% DV of fat, "+foodInfo.Breakfast.MedCal.SideDish[3]+"mg of sodium, and "+foodInfo.Breakfast.MedCal.SideDish[4]+"g of protein");
+
+    $("#MLM").text(foodInfo.Lunch.MedCal.MainCourse[0]+" with "+foodInfo.Lunch.MedCal.MainCourse[1]+" Calories, "+foodInfo.Lunch.MedCal.MainCourse[2]+"% DV of fat, "+foodInfo.Lunch.MedCal.MainCourse[3]+"mg of sodium, and "+foodInfo.Lunch.MedCal.MainCourse[4]+"g of protein");
+
+    $("#MLS").text(foodInfo.Lunch.MedCal.SideDish[0]+" with "+foodInfo.Lunch.MedCal.SideDish[1]+" Calories, "+foodInfo.Lunch.MedCal.SideDish[2]+"% DV of fat, "+foodInfo.Lunch.MedCal.SideDish[3]+"mg of sodium, and "+foodInfo.Lunch.MedCal.SideDish[4]+"g of protein");
+
+    $("#MDM").text(foodInfo.Dinner.MedCal.MainCourse[0]+" with "+foodInfo.Dinner.MedCal.MainCourse[1]+" Calories, "+foodInfo.Dinner.MedCal.MainCourse[2]+"% DV of fat, "+foodInfo.Dinner.MedCal.MainCourse[3]+"mg of sodium, and "+foodInfo.Dinner.MedCal.MainCourse[4]+"g of protein");
+
+    $("#MDS1").text(foodInfo.Dinner.MedCal.SideDish1[0]+" with "+foodInfo.Dinner.MedCal.SideDish1[1]+" Calories, "+foodInfo.Dinner.MedCal.SideDish1[2]+"% DV of fat, "+foodInfo.Dinner.MedCal.SideDish1[3]+"mg of sodium, and "+foodInfo.Dinner.MedCal.SideDish1[4]+"g of protein");
+
+    $("#MDS2").text(foodInfo.Dinner.MedCal.SideDish2[0]+" with "+foodInfo.Dinner.MedCal.SideDish2[1]+" Calories, "+foodInfo.Dinner.MedCal.SideDish2[2]+"% DV of fat, "+foodInfo.Dinner.MedCal.SideDish2[3]+"mg of sodium, and "+foodInfo.Dinner.MedCal.SideDish2[4]+"g of protein");
+
+
+    $("#HBM").text(foodInfo.Breakfast.HighCal.MainCourse[0]+" with "+foodInfo.Breakfast.HighCal.MainCourse[1]+" Calories, "+foodInfo.Breakfast.HighCal.MainCourse[2]+"% DV of fat, "+foodInfo.Breakfast.HighCal.MainCourse[3]+"mg of sodium, and "+foodInfo.Breakfast.HighCal.MainCourse[4]+"g of protein");
+
+    $("#HBS").text(foodInfo.Breakfast.HighCal.SideDish[0]+" with "+foodInfo.Breakfast.HighCal.SideDish[1]+" Calories, "+foodInfo.Breakfast.HighCal.SideDish[2]+"% DV of fat, "+foodInfo.Breakfast.HighCal.SideDish[3]+"mg of sodium, and "+foodInfo.Breakfast.HighCal.SideDish[4]+"g of protein");
+
+    $("#HLM").text(foodInfo.Lunch.HighCal.MainCourse[0]+" with "+foodInfo.Lunch.HighCal.MainCourse[1]+" Calories, "+foodInfo.Lunch.HighCal.MainCourse[2]+"% DV of fat, "+foodInfo.Lunch.HighCal.MainCourse[3]+"mg of sodium, and "+foodInfo.Lunch.HighCal.MainCourse[4]+"g of protein");
+
+    $("#HLS").text(foodInfo.Lunch.HighCal.SideDish[0]+" with "+foodInfo.Lunch.HighCal.SideDish[1]+" Calories, "+foodInfo.Lunch.HighCal.SideDish[2]+"% DV of fat, "+foodInfo.Lunch.HighCal.SideDish[3]+"mg of sodium, and "+foodInfo.Lunch.HighCal.SideDish[4]+"g of protein");
+
+    $("#HDM").text(foodInfo.Dinner.HighCal.MainCourse[0]+" with "+foodInfo.Dinner.HighCal.MainCourse[1]+" Calories, "+foodInfo.Dinner.HighCal.MainCourse[2]+"% DV of fat, "+foodInfo.Dinner.HighCal.MainCourse[3]+"mg of sodium, and "+foodInfo.Dinner.HighCal.MainCourse[4]+"g of protein");
+
+    $("#HDS1").text(foodInfo.Dinner.HighCal.SideDish1[0]+" with "+foodInfo.Dinner.HighCal.SideDish1[1]+" Calories, "+foodInfo.Dinner.HighCal.SideDish1[2]+"% DV of fat, "+foodInfo.Dinner.HighCal.SideDish1[3]+"mg of sodium, and "+foodInfo.Dinner.HighCal.SideDish1[4]+"g of protein");
+
+    $("#HDS2").text(foodInfo.Dinner.HighCal.SideDish2[0]+" with "+foodInfo.Dinner.HighCal.SideDish2[1]+" Calories, "+foodInfo.Dinner.HighCal.SideDish2[2]+"% DV of fat, "+foodInfo.Dinner.HighCal.SideDish2[3]+"mg of sodium, and "+foodInfo.Dinner.HighCal.SideDish2[4]+"g of protein");
+
+
+    $("#B1").text(foodInfo.Highlights.Breakfast.Food1[0]);
+    $("#B2").text(foodInfo.Highlights.Breakfast.Food2[0]);
+    $("#B3").text(foodInfo.Highlights.Breakfast.Food3[0]);
+    $("#B4").text(foodInfo.Highlights.Breakfast.Food4[0]);
+    $("#B5").text(foodInfo.Highlights.Breakfast.Food5[0]);
+
+    $("#L1").text(foodInfo.Highlights.Lunch.Food1[0]);
+    $("#L2").text(foodInfo.Highlights.Lunch.Food2[0]);
+    $("#L3").text(foodInfo.Highlights.Lunch.Food3[0]);
+    $("#L4").text(foodInfo.Highlights.Lunch.Food4[0]);
+    $("#L5").text(foodInfo.Highlights.Lunch.Food5[0]);
+
+    $("#D1").text(foodInfo.Highlights.Dinner.Food1[0]);
+    $("#D2").text(foodInfo.Highlights.Dinner.Food2[0]);
+    $("#D3").text(foodInfo.Highlights.Dinner.Food3[0]);
+    $("#D4").text(foodInfo.Highlights.Dinner.Food4[0]);
+    $("#D5").text(foodInfo.Highlights.Dinner.Food5[0]);
+
   });
 });
 </script>
 
 </body>
 </html>
-
