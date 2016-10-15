@@ -4,6 +4,11 @@ import re
 import string #########!
 
 def removeNonAscii(s): return "".join(i for i in s if ord(i)<128)
+#def removeBadDots(s): 
+#	if s[0] == ".":
+#		s[0] = ''
+#	if s[len(s)-1] == '.':
+#		s[len(s)-1] = ''
 
 
 menu = urllib.urlopen('http://menus.tufts.edu/foodpro/shortmenu.asp?sName=Tufts%20Dining&locationNum=11&locationName=Dewick-MacPhie%20Dining%20Center&naFlag=1').read()
@@ -24,25 +29,27 @@ for meal in result:
 		label = []
 		
 		label.append(soup_f.body.find('div').string)
-		#	label.append(removeNonAscii(c.string))
+#			label.append(removeBadDots(removeNonAscii(c.string)))
 		for b in soup_f.find_all('hr'):
 			thing1 = b.find_previous_sibling().string
-			thing1 = removeNonAscii(thing1)
 			font.append(thing1)
 		for a in soup_f.find_all('b'):
 			bold.append(removeNonAscii(a.string))
-		if len(bold) == 0:
-			break
-		elif len(font) == 0:
+		if len(font) == 0:
 			break
 		elif len(label) ==0:
-			break	
-		print ""	
-		print label[0]
-		print bold[1]
-		print bold[7]
-		print font[18]
-		print font[20]
+			break
+		bold[1] = bold[1][8:]
+		bold[1] = int(bold[1])
+		if bold[1] >= 50:
+			print ""	
+			print label[0]
+			print bold[1]
+			print bold[7]
+			font[18] = font[18][:-1]
+			print font[18]
+			font[20] = font[20][:-2]
+			print font[20]
 		#for r in soup_f.find_all(font size="3" face="arial"):
 		#	font.append(f)
 		#	print f
@@ -51,9 +58,9 @@ for meal in result:
 		
 
 
-class Nutrients:
-	cals = 0
-	fat = 0
-	sod = 0
-	prot = 0
+#class Nutrients:
+#	cals = 0
+#	fat = 0
+#	sod = 0
+#	prot = 0
 
