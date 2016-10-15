@@ -1,0 +1,636 @@
+
+Chopped Walnuts
+175
+26
+6.8
+0.6
+
+Organic Hot Oatmeal
+99
+2
+4.3
+4.6
+
+Breakfast Egg Burrito
+377
+29
+17.4
+1004.5
+
+Egg White Scramble
+73
+3
+11.1
+179.2
+
+Hard Cooked Eggs
+80
+8
+7
+79.5
+
+Spinach Omelet
+198
+22
+14.6
+167.7
+
+VM Scrambled Eggs
+182
+23
+10.7
+119.1
+
+Apple Maple Chicken Sausage
+113
+7
+6.5
+275.4
+
+Hash Browns
+148
+16
+1
+226
+
+Assorted Bagels
+269
+2
+10.2
+329.1
+
+Cream Cheese
+97
+15
+1.7
+91
+
+Zucchini Bread
+324
+24
+4.4
+196.9
+
+Apple Juice
+60
+0
+0.5
+5
+
+Balsamic Vinaigrette Dressing
+126
+19
+0
+167.9
+
+Bartlett Pears
+96
+0
+0.6
+1.7
+
+Belgian Waffles
+331
+6
+6.1
+1413
+
+Scrambled Eggs with Cheese
+205
+22
+16.4
+224.5
+
+VM Scrambled Eggs
+182
+23
+10.7
+119.1
+
+Thai Sweet Potato & Red Curry Soup
+86
+7
+1
+251.9
+
+Chicken Nuggets
+491
+45
+22.1
+1013.8
+
+Tofu Scramble
+135
+12
+15.6
+71.9
+
+VG Organic Edamame Soybeans
+160
+12
+14.7
+20
+
+VG Penne w/ Vegan Sausage Tomato Sauce
+198
+6
+14.7
+751.1
+
+VG Ten Veggies Burger
+120
+5
+6
+380
+
+Vegan Chik'n Nugget
+247
+17
+16.5
+356.9
+
+Grilled Cheeseburger
+227
+28
+16
+215.6
+
+Grilled Chicken Breast
+133
+6
+23.5
+189.8
+
+Grilled Hotdog
+159
+26
+6
+586.9
+
+Round Bacon Slices
+53
+7
+2.3
+166.7
+
+VM Rotini Spiral Pasta
+165
+1
+6.2
+1112.4
+
+Potato Puffs
+235
+25
+2
+330.2
+
+Honey Mustard Sauce
+112
+13
+0
+233.3
+
+Cheese Pizza
+281
+16
+13.7
+518.5
+
+Pizza Broccoli Feta Mushroom
+270
+15
+11.6
+755.2
+
+Pizza Sausage and Pepperoni
+369
+27
+17.8
+865.6
+
+VG Pizza Veggie w/No Cheese
+173
+5
+6.6
+260.6
+
+Vegan No Dairy Cheese Pizza
+242
+11
+7
+558.7
+
+Deli Sliced Genoa Salami
+233
+33
+10.1
+951.8
+
+Deli Sliced Ham
+61
+4
+7.8
+618.2
+
+Deli Sliced Roast Beef
+71
+3
+12.2
+232.9
+
+Deli Sliced Turkey
+51
+2
+9.1
+435.4
+
+Egg Salad
+129
+17
+5.8
+179.3
+
+Sliced Muenster Cheese
+104
+13
+6.6
+178
+
+Sliced Provolone Cheese
+101
+12
+7.1
+253.1
+
+Sliced Swiss Cheese
+111
+13
+7.4
+141.8
+
+Sliced Yellow Cheddar Cheese
+108
+15
+6.8
+182.3
+
+Tuna Salad
+137
+15
+10.6
+326.3
+
+White American Cheese
+106
+14
+6.3
+355.5
+
+VG Chickpea Salad
+61
+5
+1.7
+159.2
+
+Chickpea Hummus
+61
+7
+2
+116.4
+
+Feta Cheese
+75
+9
+4
+316.4
+
+Mild White Shredded Cheddar
+114
+14
+7.1
+176.1
+
+Mild Yellow Shredded Cheddar
+114
+14
+7.1
+176.1
+
+SB Crumbled Bleu Cheese
+100
+13
+6.1
+395.5
+
+SB Vegan Asian Teriyaki Tofu
+60
+5
+6.5
+120
+
+VG Vegan Daiya "Mozzarella Cheese"
+91
+9
+1
+283.5
+
+10" Wheat Tortilla
+175
+2
+6
+420
+
+Butterscotch Pudding
+72
+2
+0.3
+170.1
+
+M&M Brownies
+248
+18
+2.9
+102.5
+
+Apple Juice
+60
+0
+0.5
+5
+
+Balsamic Vinaigrette Dressing
+126
+19
+0
+167.9
+
+Bartlett Pears
+96
+0
+0.6
+1.7
+
+Belgian Waffles
+331
+6
+6.1
+1413
+
+Thai Sweet Potato & Red Curry Soup
+86
+7
+1
+251.9
+
+Carved Roast Leg of Lamb
+477
+52
+40.1
+212.2
+
+Chicken Cordon Bleu
+220
+15
+20
+620
+
+VM Spinach Mushroom Lasagna
+459
+36
+27.1
+990.2
+
+VG Black Bean Chili w/Butternut Squash & Chard
+129
+3
+6.2
+345.1
+
+VG Five Grain Blend Rice
+140
+1
+3.4
+318.9
+
+VM Curried Noodles w/Tofu
+209
+5
+9.2
+79.4
+
+VM Eggplant Parmesan
+514
+48
+21.4
+814.7
+
+SF Penne w/Chicken and Pesto
+447
+43
+15
+306
+
+Grilled BBQ Rubbed Chicken
+134
+3
+26.5
+601.1
+
+Grilled Cheeseburger
+227
+28
+16
+215.6
+
+Grilled Hotdog
+159
+26
+6
+586.9
+
+Southwest Seasoned Steak
+324
+17
+51.1
+164.8
+
+VG Organic Penne Pasta
+151
+0
+4.8
+13.1
+
+VM Rotini Spiral Pasta
+165
+1
+6.2
+1112.4
+
+Rice Pilaf
+306
+10
+4.7
+958.5
+
+Roasted Potato Medley w/Sage
+159
+12
+2
+609.3
+
+Acapulco Zucchini
+96
+12
+1.3
+199.4
+
+Herbed Corn
+209
+19
+4
+339
+
+Deli Sliced Genoa Salami
+233
+33
+10.1
+951.8
+
+Deli Sliced Ham
+61
+4
+7.8
+618.2
+
+Deli Sliced Roast Beef
+71
+3
+12.2
+232.9
+
+Deli Sliced Turkey
+51
+2
+9.1
+435.4
+
+Egg Salad
+129
+17
+5.8
+179.3
+
+Sliced Muenster Cheese
+104
+13
+6.6
+178
+
+Sliced Provolone Cheese
+101
+12
+7.1
+253.1
+
+Sliced Swiss Cheese
+111
+13
+7.4
+141.8
+
+Sliced Yellow Cheddar Cheese
+108
+15
+6.8
+182.3
+
+Tuna Salad
+137
+15
+10.6
+326.3
+
+White American Cheese
+106
+14
+6.3
+355.5
+
+VG Chickpea Salad
+61
+5
+1.7
+159.2
+
+Chickpea Hummus
+61
+7
+2
+116.4
+
+Feta Cheese
+75
+9
+4
+316.4
+
+Mild White Shredded Cheddar
+114
+14
+7.1
+176.1
+
+Mild Yellow Shredded Cheddar
+114
+14
+7.1
+176.1
+
+SB Crumbled Bleu Cheese
+100
+13
+6.1
+395.5
+
+SB Vegan Asian Teriyaki Tofu
+60
+5
+6.5
+120
+
+VG Vegan Daiya "Mozzarella Cheese"
+91
+9
+1
+283.5
+
+Coconut Crunch Cake
+567
+45
+2.9
+314
+
+Apple Juice
+60
+0
+0.5
+5
+
+Balsamic Vinaigrette Dressing
+126
+19
+0
+167.9
+
+Bartlett Pears
+96
+0
+0.6
+1.7
+
+Belgian Waffles
+331
+6
+6.1
+1413

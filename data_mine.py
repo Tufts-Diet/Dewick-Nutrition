@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import urllib
+import json
 import re
 import string #########!
 
@@ -16,6 +17,8 @@ soup = BeautifulSoup(menu)
 
 result = soup.find_all(onmouseover = "window.status = 'Click for Nutritive Analysis.'; return true;")
 i = 0
+k=0
+jthing = dict()
 
 for meal in result:
 	i += 1
@@ -43,23 +46,37 @@ for meal in result:
 			break
 		bold[1] = bold[1][8:]
 		bold[1] = int(bold[1])
+		font[18] = font[18][:-1]
+		font[20] = font[20][:-2]
 		if bold[1] >= 50:	
-			print label[0]
-			print bold[1]
-			print bold[7]
-			font[18] = font[18][:-1]
-			print font[18]
-			font[20] = font[20][:-2]
-			print font[20]
-			print i
-			print ""
+			#print
+			data = {
+			'meal'	: label[0],	 
+			'cal'	: bold[1],
+			'fat'	: int(bold[7]),
+			'sodium': float(font[18]),
+			'prot'	: float(font[20]),
+			'meal'	: i }
+			
+			jthing[k] = data
+			k = k+1
+
+			#font[18] = font[18][:-1]
+			#print font[18]
+			#font[20] = font[20][:-2]
+			#print font[20]
+			#print i
+			#print ""
+
 		#for r in soup_f.find_all(font size="3" face="arial"):
 		#	font.append(f)
 		#	print f
 		#nut = Nutrients
 		#nut.cals = 
-		
+			
 
+with open('data.json', 'w') as f:
+	json.dump(jthing, f)
 
 #class Nutrients:
 #	cals = 0
