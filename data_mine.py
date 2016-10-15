@@ -11,5 +11,13 @@ for meal in result:
 	soup_l = BeautifulSoup(l)
 	foods = soup_l.find_all(onmouseover = "window.status = 'Click for label of this item.'; return true;")
 	for food in foods
+		print food.get('href')
 		f = urllib.urlopen("http://menus.tufts.edu/foodpro/" + food.get('href')).read()
 		
+
+
+class Nutrients:
+	cals = 0
+	fat = 0
+	sod = 0
+	prot = 0
