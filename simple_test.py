@@ -41,24 +41,24 @@ f1.write('\
 \
   "Highlights":{\
     "Breakfast":{\
-      "Food1":["name", "info1", "info2", "info3", "info4"],\
-      "Food2":["name", "info1", "info2", "info3", "info4"],\
-      "Food3":["name", "info1", "info2", "info3", "info4"],\
-      "Food4":["name", "info1", "info2", "info3", "info4"],\
-      "Food5":["name", "info1", "info2", "info3", "info4"]\
+      "Food1":["Fried Eggs", "info1", "info2", "info3", "info4"],\
+      "Food2":["Bacon", "info1", "info2", "info3", "info4"],\
+      "Food3":["Baguettes", "info1", "info2", "info3", "info4"],\
+      "Food4":["Watermelon", "info1", "info2", "info3", "info4"],\
+      "Food5":["Yummy Potatoes", "info1", "info2", "info3", "info4"]\
     },\
     "Lunch":{\
-      "Food1":["name", "info1", "info2", "info3", "info4"],\
-      "Food2":["name", "info1", "info2", "info3", "info4"],\
-      "Food3":["name", "info1", "info2", "info3", "info4"],\
-      "Food4":["name", "info1", "info2", "info3", "info4"],\
-      "Food5":["name", "info1", "info2", "info3", "info4"]\
+      "Food1":["Swordfish", "info1", "info2", "info3", "info4"],\
+      "Food2":["Yogurt", "info1", "info2", "info3", "info4"],\
+      "Food3":["Colored Goldfish", "info1", "info2", "info3", "info4"],\
+      "Food4":["Mozzerella sticks", "info1", "info2", "info3", "info4"],\
+      "Food5":["Sandwiches", "info1", "info2", "info3", "info4"]\
     },\
     "Dinner":{\
-      "Food1":["name", "info1", "info2", "info3", "info4"],\
-      "Food2":["name", "info1", "info2", "info3", "info4"],\
-      "Food3":["name", "info1", "info2", "info3", "info4"],\
-      "Food4":["name", "info1", "info2", "info3", "info4"],\
-      "Food5":["name", "info1", "info2", "info3", "info4"]\
+      "Food1":["Mac n Cheese", "info1", "info2", "info3", "info4"],\
+      "Food2":["Teriyaki Beef", "info1", "info2", "info3", "info4"],\
+      "Food3":["Way too much rice", "info1", "info2", "info3", "info4"],\
+      "Food4":["Potatoes", "info1", "info2", "info3", "info4"],\
+      "Food5":["Slightly stale chicken", "info1", "info2", "info3", "info4"]\
     }}\
  }')

@@ -267,7 +267,7 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <h4>Breakfast<br>Your main dish should be <div class="mealinfo" id="LBM"></div><br>Your side dish
+        <h4>Breakfast<br>Your main dish should be <div class="mealinfo" id="LBM" data-toggle="tooltip" data-placement="top"></div><br>Your side dish
         should be <div class="mealinfo" id="LBS"></div> </h4>
       </div>
       <div class="item">
@@ -488,29 +488,49 @@ $(document).ready(function(){
     foodInfo = jQuery.parseJSON(data);
     console.log(foodInfo);
 
-    $("#LBM").text(foodInfo.Breakfast.LowCal.MainCourse[0]);
-    $("#LBS").text(foodInfo.Breakfast.LowCal.SideDish[0]);
-    $("#LLM").text(foodInfo.Lunch.LowCal.MainCourse[0]);
-    $("#LLS").text(foodInfo.Lunch.LowCal.SideDish[0]);
-    $("#LDM").text(foodInfo.Dinner.LowCal.MainCourse[0]);
-    $("#LDS1").text(foodInfo.Dinner.LowCal.SideDish1[0]);
-    $("#LDS2").text(foodInfo.Dinner.LowCal.SideDish2[0]);
+    $("#LBM").text(foodInfo.Breakfast.LowCal.MainCourse[0]+" with "+foodInfo.Breakfast.LowCal.MainCourse[1]+" Calories, "+foodInfo.Breakfast.LowCal.MainCourse[2]+"% DV of fat, "+foodInfo.Breakfast.LowCal.MainCourse[3]+"mg of sodium, and "+foodInfo.Breakfast.LowCal.MainCourse[4]+"g of protein");
 
-    $("#MBM").text(foodInfo.Breakfast.MedCal.MainCourse[0]);
-    $("#MBS").text(foodInfo.Breakfast.MedCal.SideDish[0]);
-    $("#MLM").text(foodInfo.Lunch.MedCal.MainCourse[0]);
-    $("#MLS").text(foodInfo.Lunch.MedCal.SideDish[0]);
-    $("#MDM").text(foodInfo.Dinner.MedCal.MainCourse[0]);
-    $("#MDS1").text(foodInfo.Dinner.MedCal.SideDish1[0]);
-    $("#MDS2").text(foodInfo.Dinner.MedCal.SideDish2[0]);
+    $("#LBS").text(foodInfo.Breakfast.LowCal.SideDish[0]+" with "+foodInfo.Breakfast.LowCal.SideDish[1]+" Calories, "+foodInfo.Breakfast.LowCal.SideDish[2]+"% DV of fat, "+foodInfo.Breakfast.LowCal.SideDish[3]+"mg of sodium, and "+foodInfo.Breakfast.LowCal.SideDish[4]+"g of protein");
 
-    $("#HBM").text(foodInfo.Breakfast.HighCal.MainCourse[0]);
-    $("#HBS").text(foodInfo.Breakfast.HighCal.SideDish[0]);
-    $("#HLM").text(foodInfo.Lunch.HighCal.MainCourse[0]);
-    $("#HLS").text(foodInfo.Lunch.HighCal.SideDish[0]);
-    $("#HDM").text(foodInfo.Dinner.HighCal.MainCourse[0]);
-    $("#HDS1").text(foodInfo.Dinner.HighCal.SideDish1[0]);
-    $("#HDS2").text(foodInfo.Dinner.HighCal.SideDish2[0]);
+    $("#LLM").text(foodInfo.Lunch.LowCal.MainCourse[0]+" with "+foodInfo.Lunch.LowCal.MainCourse[1]+" Calories, "+foodInfo.Lunch.LowCal.MainCourse[2]+"% DV of fat, "+foodInfo.Lunch.LowCal.MainCourse[3]+"mg of sodium, and "+foodInfo.Lunch.LowCal.MainCourse[4]+"g of protein");
+
+    $("#LLS").text(foodInfo.Lunch.LowCal.SideDish[0]+" with "+foodInfo.Lunch.LowCal.SideDish[1]+" Calories, "+foodInfo.Lunch.LowCal.SideDish[2]+"% DV of fat, "+foodInfo.Lunch.LowCal.SideDish[3]+"mg of sodium, and "+foodInfo.Lunch.LowCal.SideDish[4]+"g of protein");
+
+    $("#LDM").text(foodInfo.Dinner.LowCal.MainCourse[0]+" with "+foodInfo.Dinner.LowCal.MainCourse[1]+" Calories, "+foodInfo.Dinner.LowCal.MainCourse[2]+"% DV of fat, "+foodInfo.Dinner.LowCal.MainCourse[3]+"mg of sodium, and "+foodInfo.Dinner.LowCal.MainCourse[4]+"g of protein");
+
+    $("#LDS1").text(foodInfo.Dinner.LowCal.SideDish1[0]+" with "+foodInfo.Dinner.LowCal.SideDish1[1]+" Calories, "+foodInfo.Dinner.LowCal.SideDish1[2]+"% DV of fat, "+foodInfo.Dinner.LowCal.SideDish1[3]+"mg of sodium, and "+foodInfo.Dinner.LowCal.SideDish1[4]+"g of protein");
+
+    $("#LDS2").text(foodInfo.Dinner.LowCal.SideDish2[0]+" with "+foodInfo.Dinner.LowCal.SideDish2[1]+" Calories, "+foodInfo.Dinner.LowCal.SideDish2[2]+"% DV of fat, "+foodInfo.Dinner.LowCal.SideDish2[3]+"mg of sodium, and "+foodInfo.Dinner.LowCal.SideDish2[4]+"g of protein");
+
+    $("#MBM").text(foodInfo.Breakfast.MedCal.MainCourse[0]+" with "+foodInfo.Breakfast.MedCal.MainCourse[1]+" Calories, "+foodInfo.Breakfast.MedCal.MainCourse[2]+"% DV of fat, "+foodInfo.Breakfast.MedCal.MainCourse[3]+"mg of sodium, and "+foodInfo.Breakfast.MedCal.MainCourse[4]+"g of protein");
+
+    $("#MBS").text(foodInfo.Breakfast.MedCal.SideDish[0]+" with "+foodInfo.Breakfast.MedCal.SideDish[1]+" Calories, "+foodInfo.Breakfast.MedCal.SideDish[2]+"% DV of fat, "+foodInfo.Breakfast.MedCal.SideDish[3]+"mg of sodium, and "+foodInfo.Breakfast.MedCal.SideDish[4]+"g of protein");
+
+    $("#MLM").text(foodInfo.Lunch.MedCal.MainCourse[0]+" with "+foodInfo.Lunch.MedCal.MainCourse[1]+" Calories, "+foodInfo.Lunch.MedCal.MainCourse[2]+"% DV of fat, "+foodInfo.Lunch.MedCal.MainCourse[3]+"mg of sodium, and "+foodInfo.Lunch.MedCal.MainCourse[4]+"g of protein");
+
+    $("#MLS").text(foodInfo.Lunch.MedCal.SideDish[0]+" with "+foodInfo.Lunch.MedCal.SideDish[1]+" Calories, "+foodInfo.Lunch.MedCal.SideDish[2]+"% DV of fat, "+foodInfo.Lunch.MedCal.SideDish[3]+"mg of sodium, and "+foodInfo.Lunch.MedCal.SideDish[4]+"g of protein");
+
+    $("#MDM").text(foodInfo.Dinner.MedCal.MainCourse[0]+" with "+foodInfo.Dinner.MedCal.MainCourse[1]+" Calories, "+foodInfo.Dinner.MedCal.MainCourse[2]+"% DV of fat, "+foodInfo.Dinner.MedCal.MainCourse[3]+"mg of sodium, and "+foodInfo.Dinner.MedCal.MainCourse[4]+"g of protein");
+
+    $("#MDS1").text(foodInfo.Dinner.MedCal.SideDish1[0]+" with "+foodInfo.Dinner.MedCal.SideDish1[1]+" Calories, "+foodInfo.Dinner.MedCal.SideDish1[2]+"% DV of fat, "+foodInfo.Dinner.MedCal.SideDish1[3]+"mg of sodium, and "+foodInfo.Dinner.MedCal.SideDish1[4]+"g of protein");
+
+    $("#MDS2").text(foodInfo.Dinner.MedCal.SideDish2[0]+" with "+foodInfo.Dinner.MedCal.SideDish2[1]+" Calories, "+foodInfo.Dinner.MedCal.SideDish2[2]+"% DV of fat, "+foodInfo.Dinner.MedCal.SideDish2[3]+"mg of sodium, and "+foodInfo.Dinner.MedCal.SideDish2[4]+"g of protein");
+
+
+    $("#HBM").text(foodInfo.Breakfast.HighCal.MainCourse[0]+" with "+foodInfo.Breakfast.HighCal.MainCourse[1]+" Calories, "+foodInfo.Breakfast.HighCal.MainCourse[2]+"% DV of fat, "+foodInfo.Breakfast.HighCal.MainCourse[3]+"mg of sodium, and "+foodInfo.Breakfast.HighCal.MainCourse[4]+"g of protein");
+
+    $("#HBS").text(foodInfo.Breakfast.HighCal.SideDish[0]+" with "+foodInfo.Breakfast.HighCal.SideDish[1]+" Calories, "+foodInfo.Breakfast.HighCal.SideDish[2]+"% DV of fat, "+foodInfo.Breakfast.HighCal.SideDish[3]+"mg of sodium, and "+foodInfo.Breakfast.HighCal.SideDish[4]+"g of protein");
+
+    $("#HLM").text(foodInfo.Lunch.HighCal.MainCourse[0]+" with "+foodInfo.Lunch.HighCal.MainCourse[1]+" Calories, "+foodInfo.Lunch.HighCal.MainCourse[2]+"% DV of fat, "+foodInfo.Lunch.HighCal.MainCourse[3]+"mg of sodium, and "+foodInfo.Lunch.HighCal.MainCourse[4]+"g of protein");
+
+    $("#HLS").text(foodInfo.Lunch.HighCal.SideDish[0]+" with "+foodInfo.Lunch.HighCal.SideDish[1]+" Calories, "+foodInfo.Lunch.HighCal.SideDish[2]+"% DV of fat, "+foodInfo.Lunch.HighCal.SideDish[3]+"mg of sodium, and "+foodInfo.Lunch.HighCal.SideDish[4]+"g of protein");
+
+    $("#HDM").text(foodInfo.Dinner.HighCal.MainCourse[0]+" with "+foodInfo.Dinner.HighCal.MainCourse[1]+" Calories, "+foodInfo.Dinner.HighCal.MainCourse[2]+"% DV of fat, "+foodInfo.Dinner.HighCal.MainCourse[3]+"mg of sodium, and "+foodInfo.Dinner.HighCal.MainCourse[4]+"g of protein");
+
+    $("#HDS1").text(foodInfo.Dinner.HighCal.SideDish1[0]+" with "+foodInfo.Dinner.HighCal.SideDish1[1]+" Calories, "+foodInfo.Dinner.HighCal.SideDish1[2]+"% DV of fat, "+foodInfo.Dinner.HighCal.SideDish1[3]+"mg of sodium, and "+foodInfo.Dinner.HighCal.SideDish1[4]+"g of protein");
+
+    $("#HDS2").text(foodInfo.Dinner.HighCal.SideDish2[0]+" with "+foodInfo.Dinner.HighCal.SideDish2[1]+" Calories, "+foodInfo.Dinner.HighCal.SideDish2[2]+"% DV of fat, "+foodInfo.Dinner.HighCal.SideDish2[3]+"mg of sodium, and "+foodInfo.Dinner.HighCal.SideDish2[4]+"g of protein");
+
 
     $("#B1").text(foodInfo.Highlights.Breakfast.Food1[0]);
     $("#B2").text(foodInfo.Highlights.Breakfast.Food2[0]);
