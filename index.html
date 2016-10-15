@@ -129,6 +129,9 @@
       border-radius: 0;
       font-family: Montserrat, sans-serif;
   }
+  .mealinfo {
+    display:inline;
+  }
   .navbar li a, .navbar .navbar-brand {
       color: #fff !important;
   }
@@ -258,13 +261,16 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <h4>Breakfast<br>For Breakfast, you should have </h4>
+        <h4>Breakfast<br>Your main dish should be <div class="mealinfo" id="LBM"></div><br>Your side dish
+        should be <div class="mealinfo" id="LBS"></div> </h4>
       </div>
       <div class="item">
-        <h4>Lunch</h4>
+        <h4>Lunch<br>Your main dish should be <div class="mealinfo" id="LLM"></div><br>Your side dish
+        should be <div class="mealinfo" id="LLS"></div> </h4>
       </div>
       <div class="item">
-        <h4>Dinner</h4>
+        <h4>Dinner<br>Your main dish should be <div class="mealinfo" id="LDM"></div><br>Your first side dish
+        should be <div class="mealinfo" id="LDS1"></div><br>Your second side dish should be <div class="mealinfo" id="LDS2"></div> </h4>
       </div>
     </div>
 
@@ -299,13 +305,16 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <h4>Breakfast</h4>
+        <h4>Breakfast<br>Your main dish should be <div class="mealinfo" id="MBM"></div><br>Your side dish
+        should be <div class="mealinfo" id="MBS"></div> </h4>
       </div>
       <div class="item">
-        <h4>Lunch</h4>
+        <h4>Lunch<br>Your main dish should be <div class="mealinfo" id="MLM"></div><br>Your side dish
+        should be <div class="mealinfo" id="MLS"></div> </h4>
       </div>
       <div class="item">
-        <h4>Dinner</h4>
+        <h4>Dinner<br>Your main dish should be <div class="mealinfo" id="MDM"></div><br>Your first side dish
+        should be <div class="mealinfo" id="MDS1"></div><br>Your second side dish should be <div class="mealinfo" id="MDS2"></div> </h4>
       </div>
     </div>
 
@@ -338,13 +347,16 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <h4>Breakfast</h4>
+        <h4>Breakfast<br>Your main dish should be <div class="mealinfo" id="HBM"></div><br>Your side dish
+        should be <div class="mealinfo" id="HBS"></div> </h4>
       </div>
       <div class="item">
-        <h4>Lunch</h4>
+        <h4>Lunch<br>Your main dish should be <div class="mealinfo" id="HLM"></div><br>Your side dish
+        should be <div class="mealinfo" id="HLS"></div> </h4>
       </div>
       <div class="item">
-        <h4>Dinner</h4>
+        <h4>Dinner<br>Your main dish should be <div class="mealinfo" id="HDM"></div><br>Your first side dish
+        should be <div class="mealinfo" id="HDS1"></div><br>Your second side dish should be <div class="mealinfo" id="HDS2"></div></h4>
       </div>
     </div>
 
@@ -436,6 +448,9 @@
 
 <script>
 $(document).ready(function(){
+
+  $(".mealinfo").text("showing up soon!");
+
   // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a,footer a,#myPage a").on('click', function(event) {
     // Make sure this.hash has a value before overriding default behavior
@@ -471,9 +486,34 @@ $(document).ready(function(){
 
 
   //AJAX
-  $.get("http://intense-waters-35324.herokuapp.com/FoodInfo.json", function(data, status){  
-  //$.get("http://localhost:8000/FoodInfo.json", function(data, status){
-    console.log(data);
+  //$.get("http://intense-waters-35324.herokuapp.com/FoodInfo.json", function(data, status){  
+  $.get("http://localhost:8000/FoodInfo.json", function(data, status){
+    foodInfo = jQuery.parseJSON(data);
+    console.log(foodInfo);
+
+    $("#LBM").text(foodInfo.Breakfast.LowCal.MainCourse[0]);
+    $("#LBS").text(foodInfo.Breakfast.LowCal.SideDish[0]);
+    $("#LLM").text(foodInfo.Lunch.LowCal.MainCourse[0]);
+    $("#LLS").text(foodInfo.Lunch.LowCal.SideDish[0]);
+    $("#LDM").text(foodInfo.Dinner.LowCal.MainCourse[0]);
+    $("#LDS1").text(foodInfo.Dinner.LowCal.SideDish1[0]);
+    $("#LDS2").text(foodInfo.Dinner.LowCal.SideDish2[0]);
+    $("#MBM").text(foodInfo.Breakfast.MedCal.MainCourse[0]);
+    $("#MBS").text(foodInfo.Breakfast.MedCal.SideDish[0]);
+    $("#MLM").text(foodInfo.Lunch.MedCal.MainCourse[0]);
+    $("#MLS").text(foodInfo.Lunch.MedCal.SideDish[0]);
+    $("#MDM").text(foodInfo.Dinner.MedCal.MainCourse[0]);
+    $("#MDS1").text(foodInfo.Dinner.MedCal.SideDish1[0]);
+    $("#MDS2").text(foodInfo.Dinner.MedCal.SideDish2[0]);
+    $("#HBM").text(foodInfo.Breakfast.HighCal.MainCourse[0]);
+    $("#HBS").text(foodInfo.Breakfast.HighCal.SideDish[0]);
+    $("#HLM").text(foodInfo.Lunch.HighCal.MainCourse[0]);
+    $("#HLS").text(foodInfo.Lunch.HighCal.SideDish[0]);
+    $("#HDM").text(foodInfo.Dinner.HighCal.MainCourse[0]);
+    $("#HDS1").text(foodInfo.Dinner.HighCal.SideDish1[0]);
+    $("#HDS2").text(foodInfo.Dinner.HighCal.SideDish2[0]);
+
+
   });
 });
 </script>
