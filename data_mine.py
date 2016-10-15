@@ -16,7 +16,7 @@ for meal in result:
 		soup_f = BeautifulSoup(f)
 		bold = []
 		font = []
-		for b in soup_f.find_all(font size="5" face="arial"):
+		for b in soup_f.find_all('font'):
 			strip_tags(b)
 			bold.append(b)
 			print b
