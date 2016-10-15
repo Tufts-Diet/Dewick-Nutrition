@@ -7,4 +7,6 @@ soup = BeautifulSoup(r)
 result = soup.find_all(onmouseover = "window.status = 'Click for Nutritive Analysis.'; return true;")
 
 for meal in result:
-	print("http://menus.tufts.edu/foodpro/" + meal.get('href'))
+	l = urllib.urlopen("http://menus.tufts.edu/foodpro/" + meal.get('href')).read()
+	soup_l = BeautifulSoup(l)
+	foods  soup_l.find_all(
