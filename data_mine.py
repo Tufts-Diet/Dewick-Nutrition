@@ -17,8 +17,7 @@ soup = BeautifulSoup(menu)
 
 result = soup.find_all(onmouseover = "window.status = 'Click for Nutritive Analysis.'; return true;")
 i = 0
-k=0
-jthing = dict()
+jthing = []
 
 for meal in result:
 	i += 1
@@ -58,8 +57,8 @@ for meal in result:
 			'prot'	: float(font[20]),
 			'meal'	: i }
 			
-			jthing[k] = data
-			k = k+1
+			jthing.append(data)
+		
 
 			#font[18] = font[18][:-1]
 			#print font[18]
