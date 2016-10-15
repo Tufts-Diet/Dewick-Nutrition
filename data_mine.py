@@ -11,8 +11,19 @@ for meal in result:
 	soup_l = BeautifulSoup(l)
 	foods = soup_l.find_all(onmouseover = "window.status = 'Click for label of this item.'; return true;")
 	for food in foods:
-		print food.get('href')
+		#print food.get('href')
 		f = urllib.urlopen("http://menus.tufts.edu/foodpro/" + food.get('href')).read()
+		soup_f = BeautifulSoup(f)
+		bold = []
+		font = []
+		for b in soup_f.find_all('b'):
+			bold.append(b)
+			print b
+		for r in soup_f.find_all('font'):
+			font.append(f)
+			print f
+		nut = Nutrients
+		nut.cals = 
 		
 
 
