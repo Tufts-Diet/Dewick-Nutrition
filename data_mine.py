@@ -7,7 +7,4 @@ soup = BeautifulSoup(r)
 result = soup.find_all(onmouseover = "window.status = 'Click for Nutritive Analysis.'; return true;")
 
 for meal in result:
-	print(meal.get('href'))
-
-longmenu.asp?sName=Tufts+Dining&locationNum=11&locationName=Dewick%2DMacPhie+Dining+Center&naFlag=1&WeeksMenus=This+Week%27s+Menus&dtdate=10%2F15%2F2016&mealName=Dinner
-
+	print("http://menus.tufts.edu/foodpro/" + meal.get('href'))
