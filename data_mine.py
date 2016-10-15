@@ -1,6 +1,10 @@
 from bs4 import BeautifulSoup
 import urllib
 import re
+import string #########!
+
+def removeNonAscii(s): return "".join(i for i in s if ord(i)<128)
+
 
 menu = urllib.urlopen('http://menus.tufts.edu/foodpro/shortmenu.asp?sName=Tufts%20Dining&locationNum=11&locationName=Dewick-MacPhie%20Dining%20Center&naFlag=1').read()
 soup = BeautifulSoup(menu)
@@ -17,11 +21,28 @@ for meal in result:
 		soup_f = BeautifulSoup(f)
 		bold = []
 		font = []
-		for b in soup_f.find_all('font'):
-			bold.append(b)
-			print b
-		break
-	break
+		label = []
+		
+		label.append(soup_f.body.find('div').string)
+		#	label.append(removeNonAscii(c.string))
+		for b in soup_f.find_all('hr'):
+			thing1 = b.find_previous_sibling().string
+			thing1 = removeNonAscii(thing1)
+			font.append(thing1)
+		for a in soup_f.find_all('b'):
+			bold.append(removeNonAscii(a.string))
+		if len(bold) == 0:
+			break
+		elif len(font) == 0:
+			break
+		elif len(label) ==0:
+			break	
+		print ""	
+		print label[0]
+		print bold[1]
+		print bold[7]
+		print font[18]
+		print font[20]
 		#for r in soup_f.find_all(font size="3" face="arial"):
 		#	font.append(f)
 		#	print f
